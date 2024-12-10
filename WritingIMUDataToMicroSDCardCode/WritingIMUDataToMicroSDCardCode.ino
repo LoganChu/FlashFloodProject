@@ -24,7 +24,6 @@ float velocity = 0;
 const int chipSelect = 10;
 File myFile;
 
-
 void setupSensor()
 {
   // 1.) Set the accelerometer range (The range of measurements the sensor can track)
@@ -45,7 +44,6 @@ void setupSensor()
   //lsm.setupGyro(lsm.LSM9DS1_GYROSCALE_2000DPS);
 }
 
-
 void setup() 
 {
   Serial.begin(9600); //parameter is the baud rate (bits per second)
@@ -60,7 +58,6 @@ void setup()
   delay(2000);
   SD.begin(chipSelect);
 }
-
 
 void loop() 
 {
@@ -104,19 +101,15 @@ void loop()
     myFile.print("\tY: "); myFile.print(AY);     myFile.print(" m/s^2 ");
     myFile.print("\tZ: "); myFile.print(AZ);     myFile.println(" m/s^2 ");
 
-
     myFile.close();
     Serial.println("done.");
   } else {
     // if the file didn't open, print an error:
     Serial.println("error opening data.txt");
   }
-
   delay(1000);
 
   //Serial.print("Gyro X: "); Serial.print(g.gyro.x);   Serial.print(" rad/s");
   //Serial.print("\tY: "); Serial.print(g.gyro.y);      Serial.print(" rad/s");
   //Serial.print("\tZ: "); Serial.print(g.gyro.z);      Serial.println(" rad/s");
-
-
 }

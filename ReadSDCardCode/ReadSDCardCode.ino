@@ -49,7 +49,7 @@ void setup() {
   }
    else {
     // if the file didn't open, print an error:
-    Serial.println("error opening test1.txt");
+    Serial.println("error opening data.txt");
   }
 }
 

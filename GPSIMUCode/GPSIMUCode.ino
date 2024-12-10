@@ -48,7 +48,6 @@ void setup()
   delay(200);
   SD.begin(chipSelect);
   delay(200);
- 
 }
 
 void loop() 
